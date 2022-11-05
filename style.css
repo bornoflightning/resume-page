@@ -1,0 +1,61 @@
+:root {
+    --main-green: #7FB77E;
+    --light-green: #d6e2d6;
+
+}
+
+body {
+    background-color: var(--light-green);
+    
+}
+
+.about-me {
+    margin: 2% 6% -1.9% 6%;    
+    color: var(--main-green);
+}
+
+.top-description, .contact-info, .projects{
+    margin: 0.5% 5% 0 5%;
+    background-color: var(--main-green) ;
+    border: 2px solid gold;
+    border-radius: 9px;
+}
+.description-header{
+    padding: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display:flex;    
+    text-align: left;
+    align-items: center;       
+}
+
+.selfie {    
+    width: 25%;
+    height: 25%;
+    border: 3px solid gold;
+    border-radius: 50%;
+}
+
+.info, .footer  {
+    color: var(--light-green);
+    margin: 0 2.5% 0 2.5%;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .description-header, .contact-info {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;        
+    }
+
+    .selfie {
+        width: 35%;
+        height: 35%;
+    }
+}
+    
