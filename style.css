@@ -1,46 +1,136 @@
+/* ---------------------------------------------------------------------------color variables--------------------------------------------------------------------------------- */
 :root {
     --main-green: #7FB77E;
     --light-green: #d6e2d6;
 
 }
 
+/* ----------------------------------------------------------------------color style for background---------------------------------------------------------------------------- */
 body {
     background-color: var(--light-green);
-    
 }
 
+/* ----------------------------------------------------------------------------title and links---------------------------------------------------------------------------------- */
 .about-me {
-    margin: 2% 6% -1.9% 6%;    
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 6% -1.9% 6%;
     color: var(--main-green);
 }
+.links {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2% -.9% 2%;
+    width: 15%;
+    display: inline-flex;
+}
+
+.links p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------------image and self description-------------------------------------------------------------------------------- */
 
 .top-description, .contact-info, .projects{
     margin: 0.5% 5% 0 5%;
     background-color: var(--main-green) ;
     border: 2px solid gold;
     border-radius: 9px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
+
 .description-header{
     padding: 2.5%;
     margin-top: 2%;
     margin-bottom: 2%;
-    display:flex;    
+    display:flex;
     text-align: left;
-    align-items: center;       
+    align-items: center;
 }
 
-.selfie {    
+/* selfie image */
+.selfie {
     width: 25%;
     height: 25%;
     border: 3px solid gold;
     border-radius: 50%;
 }
 
+/* -----------------------------------------------------this section includes code the middle section of website -------------------------------------------------------------- */
+
+/* behavior to move things to center and how to handle space */
+.projects {
+    display: flex;
+    justify-content: center;
+}
+.project-area {
+    /* border: solid 1px; */
+    display:inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+/* project image */
+.full-image {
+    border-radius: 7px;
+    background-color: var(--light-green);
+    height: 250px;
+    margin: 5%;
+    border: 2px solid gold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* desription of image and project */
+.img-description {
+    color: var(--main-green);
+    text-align: center;
+
+}
+
+/* behavior for zooming out and image radius */
+.random-image {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+
+
+
+
+/* -----------------------------------------------------------this section has styling for footer------------------------------------------------------------------------- */
+
 .info, .footer  {
     color: var(--light-green);
     margin: 0 2.5% 0 2.5%;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+}
+
+
+
+
+.full-image:hover {
+    background-color: #F7F6DC;
+
+}
+
+.random-image:hover {
+
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: 300ms;
+    -webkit-transform: scale(1.2);
+
+
 }
 
 
@@ -50,12 +140,53 @@ body {
     .description-header, .contact-info {
         flex-direction: column;
         align-content: center;
-        text-align: center;        
+        text-align: center;
     }
 
     .selfie {
         width: 35%;
         height: 35%;
     }
+
+    .links {
+        width: 35%;
+
+    }
+
+
 }
-    
+
+@media only screen and (max-width: 900px) {
+
+    .links {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .about-me {
+        margin: 2% 6% -.9% 6%;
+        color: var(--main-green);
+    }
+
+    .info {
+        font-size: 200%;
+
+    }
+
+    .description-header, .contact-info {
+
+        align-content: center;
+        text-align: center;
+    }
+
+    .selfie {
+        width: 20%;
+        height: 20%;
+    }
+
+    .links {
+        margin: 0 2% -.9% 2%;;
+
+    }
+}
