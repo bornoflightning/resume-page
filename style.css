@@ -23,11 +23,13 @@ body {
     margin: 0 2% -.9% 2%;
     width: 15%;
     display: inline-flex;
+    
 }
 
-.links p {
+.links a, #projects {
     font-size: larger;
     font-weight: bold;
+    -webkit-transition: all .2s ease-in-out;
 }
 
 /* ------------------------------------------------------------------image and self description-------------------------------------------------------------------------------- */
@@ -102,10 +104,6 @@ body {
     -webkit-transition: all .2s ease-in-out;
 }
 
-
-
-
-
 /* -----------------------------------------------------------this section has styling for footer------------------------------------------------------------------------- */
 
 .info, .footer  {
@@ -116,8 +114,7 @@ body {
 }
 
 
-
-
+/* -----------------------------------------------------------------pseudo class behaviors--------------------------------------------------------------------------------- */
 .full-image:hover {
     background-color: #F7F6DC;
 
@@ -129,12 +126,16 @@ body {
     border-bottom-right-radius: 7px;
     transition: 300ms;
     -webkit-transform: scale(1.2);
+}
 
-
+.links p:hover {
+    color: #FFC090;
+    -webkit-transform: scale(1.5);
 }
 
 
 
+/* -------------------------------------------------------------style for different screen sizes----------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 500px) {
     .description-header, .contact-info {
